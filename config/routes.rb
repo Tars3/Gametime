@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/create'
+
   resources :users, except: [:index, :destroy]
 
 
