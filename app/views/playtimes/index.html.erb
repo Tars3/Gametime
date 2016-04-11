@@ -1,0 +1,10 @@
+<h1>GAMETIME</h1>
+<h2>Upcoming Playtimes</h2>
+
+<ul>
+  <% @playtimes.each do |playtime| %>
+    <li>
+      <strong> <%= playtime.game %> </strong> - <%= playtime.time %>
+    </li>
+  <% end %>
+</ul>

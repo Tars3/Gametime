@@ -1,4 +1,5 @@
 class PlaytimesController < ApplicationController
+  before_action :authorize, except: [:index, :show]
 
   def index
     @playtimes = Playtime.all
