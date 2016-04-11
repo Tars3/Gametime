@@ -1,2 +1,11 @@
-<h1>Playtimes#show</h1>
-<p>Find me in app/views/playtimes/show.html.erb</p>
+<h1> <%= @playtime.game %> </h1>
+
+<p>This sesh is a <%= @playtime.game %> at <%= @bean.origin %>, and we have <%= @bean.quantity %> pounds available.</p>
+
+<ul>
+  <li><%= @playtime.game %></li>
+  <li><%= @playtime.time %></li>
+  <li><%= @playtime.num_of_users %></li>
+</ul>
+
+<%= link_to "Back to the list!", playtimes_path %>
