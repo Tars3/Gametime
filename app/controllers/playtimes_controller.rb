@@ -14,7 +14,7 @@ class PlaytimesController < ApplicationController
   end
 
   def create
-  @playtime = Playtime.new(params.require(:playtime).permit(:name))
+  @playtime = Playtime.new(params.require(:playtime).permit(:game, :time, :num_of_players))
     if @playtime.save
         redirect_to playtimes_path
       else
@@ -28,7 +28,7 @@ class PlaytimesController < ApplicationController
 
   def update
     @playtime = Playtime.find(params[:id])
-    if @playtime.update_attributes(params.require(:playtime).permit(:name))
+    if @playtime.update_attributes(params.require(:playtime).permit(:game))
       redirect_to playtimes_path
     else
       render :edit
