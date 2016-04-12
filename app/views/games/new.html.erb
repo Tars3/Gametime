@@ -1,0 +1,14 @@
+<h1>Add a new Game!</h1>
+
+<%= form_for @game do |f| %>
+
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+
+    <%= f.submit "Add new Game!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", games_path %>

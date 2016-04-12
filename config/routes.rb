@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:index, :destroy]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :games
   resources :playtimes
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"

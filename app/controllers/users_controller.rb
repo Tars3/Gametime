@@ -14,10 +14,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def update
-  end
-
-  def show
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to playtimes_path
   end
 
   private
