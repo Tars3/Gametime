@@ -1,11 +1,12 @@
 <h1> <%= @playtime.game %> </h1>
 
-<p>This sesh is a <%= @playtime.game %> at <%= @bean.origin %>, and we have <%= @bean.quantity %> pounds available.</p>
-
 <ul>
   <li><%= @playtime.game %></li>
   <li><%= @playtime.time %></li>
   <li><%= @playtime.num_of_users %></li>
 </ul>
+
+<%= link_to "Edit this Playtime!", edit_playtime_path(@playtime) %>
+<%= link_to "Delete this Playtime!", playtime_path, method: :delete, data: { confirm: "Are you sure you want to delete this Playtime?"} %>
 
 <%= link_to "Back to the list!", playtimes_path %>

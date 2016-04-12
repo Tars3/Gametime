@@ -5,6 +5,7 @@
   <% @playtimes.each do |playtime| %>
     <li>
       <strong> <%= playtime.game %> </strong> - <%= playtime.time %>
+      <%= link_to "More info", playtime_path(playtime) %>
     </li>
   <% end %>
 </ul>

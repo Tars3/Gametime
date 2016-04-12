@@ -1,0 +1,11 @@
+<h1>GAMETIME</h1>
+<h2>Games</h2>
+
+<ul>
+  <% @games.each do |game| %>
+    <li>
+      <strong> <%= game.title %> </strong>
+      <%= link_to "More info", game_path(game) %>
+    </li>
+  <% end %>
+</ul>
