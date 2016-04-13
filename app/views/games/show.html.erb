@@ -3,6 +3,7 @@
 <p><%= @game.title %></p>
 
 <%= link_to "Edit this game.", edit_game_path(@game) %>
+<br>
 <%= link_to "Delete this game!", :game, method: :delete, data: { confirm: "Are you sure you want to delete this game?"} %>
-
+<br>
 <%= link_to "Back to the list!", games_path %>

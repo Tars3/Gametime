@@ -15,6 +15,7 @@ class PlaytimesController < ApplicationController
 
   def create
   @playtime = Playtime.new(params.require(:playtime).permit(:game_id, :time, :num_of_players))
+    @playtime.users << current_user
     if @playtime.save
       redirect_to playtimes_path
     else
@@ -41,4 +42,16 @@ class PlaytimesController < ApplicationController
     redirect_to playtimes_path
   end
 
+  def join
+    @playtime = Playtime.find(params[:id])
+    # Make sure current user is not already in playtime
+
+    # Make sure playtime is not full. Compare users to num_of_players
+
+    @playtime.users << current_user
+    if @playtime.save
+      flash.now.notice = "You have joined this Playtime"
+      render :show
+    end
+  end
 end

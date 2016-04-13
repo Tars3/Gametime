@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :games
   resources :playtimes
+  post "playtimes/:id/join" => "playtimes#join", as: :join_playtime
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"
 

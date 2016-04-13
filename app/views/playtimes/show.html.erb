@@ -1,11 +1,16 @@
 <h1> <%= @playtime.game.title %> </h1>
 
 <ul>
-  <li><%= @playtime.game_id %></li>
   <li><%= @playtime.time.strftime("%a %b %e %T %y") %></li>
-  <li><%= @playtime.num_of_players %></li>
+  <li>/<%= @playtime.num_of_players %></li>
 </ul>
+players: <% @playtime.users.each do |user| %>
+<%= user.gamertag %><br>
+<% end %>
 
+
+<%= button_to "Join!", join_playtime_path(@playtime) %>
+<br>
 <%= link_to "Edit this Playtime!", edit_playtime_path(@playtime) %>
 <br>
 <%= link_to "Delete this Playtime!", playtime_path, method: :delete, data: { confirm: "Are you sure you want to delete this Playtime?"} %>

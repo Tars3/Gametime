@@ -17,11 +17,11 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to playtimes_path
+    redirect_to s_path
   end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    params.require(:user).permit(:email, :gamertag, :password, :password_confirmation)
  end
 end
