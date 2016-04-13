@@ -4,8 +4,7 @@
 
     <div>
         <%= f.label :game %>
-        <%= f.text_field :game_id %>
-        <%= f.collection_select :game, Game.order(:title), game_id include_blank: true %>
+        <%= f.collection_select :game_id, Game.order(:title), :id, :title %>
     </div>
 
     <div>

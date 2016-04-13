@@ -4,8 +4,8 @@
 <ul>
   <% @playtimes.each do |playtime| %>
     <li>
-      <strong> <%= playtime.game %> </strong> - <%= playtime.time %>
-      <%= link_to "More info", playtime_path(playtime) %>
+      <strong> <%= playtime.game.title %> </strong> - <%= playtime.time.strftime("%a %b %e %l:%M %P") %>
+      <%= link_to "Info", playtime_path(playtime) %>
     </li>
   <% end %>
 </ul>

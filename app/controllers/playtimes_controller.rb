@@ -28,7 +28,7 @@ class PlaytimesController < ApplicationController
 
   def update
     @playtime = Playtime.find(params[:id])
-    if @playtime.update_attributes(params.require(:playtime).permit(:game))
+    if @playtime.update_attributes(params.require(:playtime).permit(:game_id))
       redirect_to playtimes_path
     else
       render :edit
