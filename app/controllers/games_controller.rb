@@ -13,7 +13,7 @@ class GamesController < ApplicationController
   end
 
   def create
-  @game = Game.new(params.require(:game).permit(:title))
+  @game = Game.new(params.require(:game).permit(:title, :image_url))
     if @game.save
       redirect_to games_path
     else
@@ -27,7 +27,7 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    if @game.update_attributes(params.require(:game).permit(:title))
+    if @game.update_attributes(params.require(:game).permit(:title, :image_url))
       redirect_to games_path
     else
       render :edit

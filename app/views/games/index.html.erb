@@ -4,9 +4,10 @@
 <ul>
   <% @games.each do |game| %>
     <li>
+      <p><%= image_tag game.image_url%></p>
       <strong> <%= game.title %> </strong>
       <%= link_to "More info", game_path(game) %>
-    </li>
+    </li><br>
   <% end %>
 </ul>
 

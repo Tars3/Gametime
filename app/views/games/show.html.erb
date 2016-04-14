@@ -1,6 +1,7 @@
 <h1> <%= @game.title %> </h1>
 
 <p><%= @game.title %></p>
+<p class="game_picture"><%= image_tag @game.image_url%></p>
 
 <%= link_to "Edit this game.", edit_game_path(@game) %>
 <br>
