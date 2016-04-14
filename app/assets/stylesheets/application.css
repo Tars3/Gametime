@@ -18,3 +18,7 @@
   width: 310px;
   height: 400px;
 }
+
+.playtime_list {
+  line-height: 120%;
+}

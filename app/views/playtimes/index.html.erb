@@ -5,7 +5,7 @@
   <% @playtimes.each do |playtime| %>
     <li>
       <strong> <%= playtime.game.title %> </strong> - <%= playtime.time.strftime("%a %b %e %l:%M %P") %>
-      <%= link_to "Info", playtime_path(playtime), class: "btn btn-default" %>
+      <%= link_to "Info", playtime_path(playtime), class: "btn btn-default btn-sm" %>
     </li>
   <% end %>
 </ul>

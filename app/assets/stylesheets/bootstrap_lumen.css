@@ -3016,7 +3016,7 @@ select[multiple].input-lg {
       touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  border: 1px solid transparent;
+  border: 0px;
   white-space: nowrap;
   padding: 7px 12px;
   font-size: 14px;
@@ -6769,8 +6769,8 @@ button.close {
   text-transform: uppercase;
 }
 .btn:hover {
-  margin-top: 1px;
-  border-bottom-width: 3px;
+  margin-top: 0px;
+  border-bottom-width: 0px;
 }
 .btn:active {
   margin-top: 2px;

@@ -3,7 +3,7 @@
   <h2>Games</h2>
   <div class="row">
     <% @games.each do |game| %>
-      <div class="col-md-4"><br>
+      <div class="col-md-4">
         <%= image_tag game.image_url, :class => "game_picture" %>
         <%= link_to "#{game.title}", game_path(game), class: "btn btn-info btn-sm" %>
       </div>
