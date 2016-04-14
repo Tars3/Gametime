@@ -1,4 +1,5 @@
 <h1> <%= @playtime.game.title %> </h1>
+
 <p><%= image_tag @playtime.game.image_url, :class => "game_picture" %></p>
 <ul>
   <li>Playtime: <%= @playtime.time.strftime("%a %b %e %T %y") %></li>
