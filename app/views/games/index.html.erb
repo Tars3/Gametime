@@ -1,16 +1,14 @@
 <h1>GAMETIME</h1>
 <h2>Games</h2>
 
-<ul>
-  <% @games.each do |game| %>
-    <li>
-      <p><%= image_tag game.image_url%></p>
-      <strong> <%= game.title %> </strong>
-      <%= link_to "More info", game_path(game) %>
-    </li><br>
-  <% end %>
-</ul>
+<% @games.each do |game| %>
 
-<%= link_to 'Add Game', new_game_path %>
+<p><%= image_tag game.image_url, :class => "game_picture" %></p>
+<strong> <%= game.title %> </strong>
+<%= link_to "More info", game_path(game), class: "btn btn-info btn-sm" %>
 <br>
-<%= link_to "List of Playtimes", playtimes_path %>
+<% end %>
+
+<%= link_to 'Add Game', new_game_path, class: "btn btn-warning" %>
+<br>
+<%= link_to "List of Playtimes", playtimes_path, class: "btn btn-default" %>

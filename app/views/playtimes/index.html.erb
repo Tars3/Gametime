@@ -5,11 +5,11 @@
   <% @playtimes.each do |playtime| %>
     <li>
       <strong> <%= playtime.game.title %> </strong> - <%= playtime.time.strftime("%a %b %e %l:%M %P") %>
-      <%= link_to "Info", playtime_path(playtime) %>
+      <%= link_to "Info", playtime_path(playtime), class: "btn btn-default" %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to 'Create Playtime', new_playtime_path %>
+<%= link_to 'Create Playtime', new_playtime_path, class: "btn btn-primary" %>
 <br>
-<%= link_to "List of Games", games_path %>
+<%= link_to "List of Games", games_path, class: "btn btn-default" %>

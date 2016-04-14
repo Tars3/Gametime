@@ -1,10 +1,9 @@
 <h1> <%= @game.title %> </h1>
 
 <p><%= @game.title %></p>
-<p class="game_picture"><%= image_tag @game.image_url%></p>
-
-<%= link_to "Edit this game.", edit_game_path(@game) %>
+<%= image_tag @game.image_url, :class => "game_picture" %>
 <br>
-<%= link_to "Delete this game!", :game, method: :delete, data: { confirm: "Are you sure you want to delete this game?"} %>
+<%= link_to "Edit this game", edit_game_path(@game), class: "btn btn-default" %>
+<%= link_to "Delete this game!", :game, method: :delete, data: { confirm: "Are you sure you want to delete this game?"}, class: "btn btn-danger" %>
 <br>
-<%= link_to "Back to the list!", games_path %>
+<%= link_to "Back to the list!", games_path, class: "btn btn-default" %>

@@ -32,6 +32,7 @@
     </div>
   </div>
 </nav>
+<!-- Login info -->
 <p>
   <% if current_user %>
     WHAZZUP <%= current_user.gamertag %>?!?
@@ -43,6 +44,10 @@
     <%= link_to 'Sign Up', new_user_path %>
   <% end %>
 </p>
+<!-- Flash spot -->
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
 <%= yield %>
 
 </body>

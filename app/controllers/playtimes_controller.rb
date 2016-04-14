@@ -44,19 +44,19 @@ class PlaytimesController < ApplicationController
 
   def join
     @playtime = Playtime.find(params[:id])
-    # Make sure current user is not already in playtime
-    #if current_user
+    # Make sure current user is not already in playtime if current_user
     # Make sure playtime is not full. Compare users to num_of_players
-    if(@playtime.users.exists?(current_user.id) || @playtime.users.count >= @playtime.num_of_players)
-      puts "******* CANNOT JOIN PLAYTIME *********"
+    if @playtime.users.exists?(current_user.id) || @playtime.users.count >= @playtime.num_of_players
+        flash.now.notice = "You can't join this Playtime!"
+        render :show
     else
-
       @playtime.users << current_user
       if @playtime.save
         flash.now.notice = "You have joined this Playtime"
+        render :show
       end
     end
-    render :show
 
   end
+
 end

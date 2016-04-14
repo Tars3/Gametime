@@ -17,8 +17,8 @@
         <%= f.text_field :num_of_players %>
     </div>
 
-    <%= f.submit "Add new playtime!" %>
+    <%= f.submit "Add new playtime!", class: "btn btn-primary" %>
 
 <% end %>
 
-<%= link_to "Back to the list!", playtimes_path %>
+<%= link_to "Back to the list!", playtimes_path, class: "btn btn-default" %>

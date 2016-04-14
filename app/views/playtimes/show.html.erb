@@ -1,5 +1,5 @@
 <h1> <%= @playtime.game.title %> </h1>
-
+<p><%= image_tag @playtime.game.image_url, :class => "game_picture" %></p>
 <ul>
   <li>Playtime: <%= @playtime.time.strftime("%a %b %e %T %y") %></li>
   <li>Party Size: <%= @playtime.num_of_players %></li>
@@ -11,10 +11,10 @@ Current Players:
   <% end %>
 </ol>
 
-<%= button_to "Join the Party!", join_playtime_path(@playtime) %>
+<%= button_to "Join the Party!", join_playtime_path(@playtime), class: "btn btn-primary" %>
 <br>
-<%= link_to "Edit Playtime", edit_playtime_path(@playtime) %>
+<%= link_to "Edit Playtime", edit_playtime_path(@playtime), class: "btn btn-default" %>
+<%= link_to "Delete Playtime", playtime_path, method: :delete, data: { confirm: "Are you sure you want to delete this Playtime?"}, class: "btn btn-danger" %>
 <br>
-<%= link_to "Delete Playtime", playtime_path, method: :delete, data: { confirm: "Are you sure you want to delete this Playtime?"} %>
 <br>
-<%= link_to "Back to the list!", playtimes_path %>
+<%= link_to "Back to the list!", playtimes_path, class: "btn btn-default" %>

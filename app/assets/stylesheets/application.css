@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.game_picture {
+  width: 310px;
+  height: 400px;
+}
