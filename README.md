@@ -9,3 +9,5 @@ CSS
 JavaScript
 jQuery
 Ruby on Rails
+
+Thanks: Martin, Noah, Angie, Andrew, 
