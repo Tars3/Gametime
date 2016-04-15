@@ -68,7 +68,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   margin: 0.67em 0;
 }
 mark {
@@ -4504,7 +4504,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #333333;
+  color: #28B62C;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {

@@ -26,3 +26,12 @@
 .game_show_page {
   text-align: center;
 }
+
+.hero_title {
+  font-size: 3em;
+  color: #28B62C;
+}
+
+.navbar-brand {
+  color: #28B62C;
+}

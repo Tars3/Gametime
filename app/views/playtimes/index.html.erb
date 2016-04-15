@@ -1,15 +1,20 @@
-<h1>GAMETIME</h1>
+<div class="col-md-11 col-md-offset-1">
+<h1 class="hero_title">GAMETIME</h1>
 <h2>Upcoming Playtimes</h2>
+</div>
 
 <ul>
   <% @playtimes.each do |playtime| %>
-    <li>
-      <strong> <%= playtime.game.title %> </strong> - <%= playtime.time.strftime("%a %b %e %l:%M %P") %>
-      <%= link_to "Info", playtime_path(playtime), class: "btn btn-default btn-sm" %>
-    </li>
+    <div class="col-md-11 col-md-offset-1">
+      <li>
+        <strong> <%= playtime.game.title %> </strong> - <%= playtime.time.strftime("%a %b %e %l:%M %P") %>
+        <%= link_to "Info", playtime_path(playtime), class: "btn btn-default btn-sm" %>
+      </li>
+    </div>
   <% end %>
 </ul>
 
+<div class="col-md-11 col-md-offset-1">
 <%= link_to 'Create Playtime', new_playtime_path, class: "btn btn-primary" %>
-<br>
-<%= link_to "List of Games", games_path, class: "btn btn-default" %>
+<%= link_to "List of Games", games_path, class: "btn btn-success" %>
+</div>
