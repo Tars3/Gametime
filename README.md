@@ -10,12 +10,7 @@ JavaScript
 Ruby on Rails
 Bootstrap
 
-_Installation_:
-INstall it.
-
 _Next steps_
 Incorporate Playtime results filtered by game in the Games Show page.
 Filter consoles (Playstation 4 and Xbox One).
 Tracking Playtimes that the user is signed up for.
-
-Thanks: Martin, Noah, Angie, Andrew, Jonathan
