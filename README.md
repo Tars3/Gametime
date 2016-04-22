@@ -10,6 +10,8 @@ JavaScript
 Ruby on Rails
 Bootstrap
 
+![Gametime ERD.](app/assets/images/gametime_ERD.jpg)
+
 _Next steps_
 Incorporate Playtime results filtered by game in the Games Show page.
 Filter consoles (Playstation 4 and Xbox One).
