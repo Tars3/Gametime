@@ -10,7 +10,7 @@ JavaScript
 Ruby on Rails
 Bootstrap
 
-![Gametime ERD.](app/assets/images/gametime_ERD.jpg)
+![Gametime ERD.](app/assets/images/Gametime_ERD.jpg)
 
 _Next steps_
 Incorporate Playtime results filtered by game in the Games Show page.
